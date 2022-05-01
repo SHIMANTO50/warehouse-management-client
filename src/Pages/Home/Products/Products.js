@@ -17,7 +17,7 @@ const Products = () => {
     return (
         <div>
             <h2>Products: {products.length}</h2>
-            <div className="row container">
+            <div className="row container mx-auto">
                 {
                     products.slice(0, 6).map(product => <Product key={product.id} product={product}></Product>)
                 }
