@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/VNgyMyy/rice.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/fdQH5gZ/masoor-dal.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/FhBRz51/egg.webp"
+    },
+    {
+        "id": 4,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/GnS91Kn/oil.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/yPDNrsW/salt.png"
+    },
+    {
+        "id": 6,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/K5wWt7V/garlic.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/XkM9qKw/onion.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/nb6Gr8z/sugar.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/tYxFCyL/Marks-Full-Cream-Milk-Powde.png"
+    },
+    {
+        "id": 10,
+        "name": "Rice",
+        "price": "100",
+        "quantity": 25,
+        "description": "This is bashmoti rice",
+        "supplierName": "Karim",
+        "status": "sold",
+        "img": "https://i.ibb.co/zxyqRKp/ghee.jpg"
+    }
+]
