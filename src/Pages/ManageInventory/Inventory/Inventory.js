@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({ product }) => {
+const Inventory = ({ product }) => {
     const { name, price, quantity, description, supplierName, img } = product;
     return (
         <div className='col-md-6 col-lg-4 col- gy-3'>
@@ -19,4 +19,4 @@ const Product = ({ product }) => {
     );
 };
 
-export default Product;
+export default Inventory;
