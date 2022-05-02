@@ -6,7 +6,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/item')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -19,7 +19,7 @@ const Products = () => {
             <h2>Products: {products.length}</h2>
             <div className="row container mx-auto">
                 {
-                    products.slice(0, 6).map(product => <Product key={product.id} product={product}></Product>)
+                    products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
                 }
             </div>
             <div className='text-center'>

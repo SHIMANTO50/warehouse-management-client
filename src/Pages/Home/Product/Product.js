@@ -7,6 +7,7 @@ const Product = ({ product }) => {
     const navigateToProductDetail = (id) => {
         navigate(`/inventory/${id}`)
     }
+
     return (
         <div className='col-md-6 col-lg-4 col- gy-3'>
             <div className="card h-100" style={{ width: "18rem" }}>
@@ -19,6 +20,7 @@ const Product = ({ product }) => {
                     <p>SupplierName: {supplierName}</p>
                     <button onClick={() => navigateToProductDetail(id)} className='btn btn-primary'>Update</button>
                 </div>
+
             </div>
         </div>
     );
