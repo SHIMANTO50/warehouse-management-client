@@ -1,22 +1,33 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    if (user) {
+        navigate('/home');
+    }
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password);
+        signInWithEmailAndPassword(email, password);
     }
-    const handleRegister = event => {
-        navigate('/register');
-    }
+
     return (
-        <div className='w-50 container mx-auto'>
+        <div className='w-50 container mx-auto login-form'>
             <h2 className='text-primary text-center mt-2'>This is Login Page</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -38,7 +49,7 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
-            <p>New Here? <Link to='/register' onClick={handleRegister} className='text-primary text-decoration-none'>Please Register</Link></p>
+            <p>New Here? <Link to='/register' className='text-primary text-decoration-none'>Please Register</Link></p>
         </div>
     );
 };
