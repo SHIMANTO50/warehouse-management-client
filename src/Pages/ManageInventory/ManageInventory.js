@@ -33,14 +33,19 @@ const ManageInventory = () => {
     return (
         <div>
             <h2>Products: {products.length}</h2>
-            <button onClick={handleAddProductNavigate} className='btn btn-primary ms-3 mt-5 mb-5'>Add New Item</button>
+            <div className='text-center'>
+                <button onClick={handleAddProductNavigate} className='btn btn-primary mt-5 mb-5'>Add New Item</button>
+            </div>
             <div className="container product-grid">
 
                 {
                     products.map(product =>
-                        <div className='border-design' key={products._id}>
+                        <div className='border-design p-5' key={products._id}>
                             <h5>Name:{product.name}</h5>
                             <h5>Price:{product.price}</h5>
+                            <p>Quantity: {product.quantity}</p>
+                            <p>Other Description: {product.description}</p>
+                            <p>SupplierName: {product.supplierName}</p>
                             <button onClick={() => handleDelete(product._id)} className='btn btn-danger mt-5'>Delete</button>
                         </div>
 
