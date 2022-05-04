@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([]);
@@ -33,11 +34,11 @@ const ManageInventory = () => {
         <div>
             <h2>Products: {products.length}</h2>
             <button onClick={handleAddProductNavigate} className='btn btn-primary ms-3 mt-5 mb-5'>Add New Item</button>
-            <div className="container">
+            <div className="container product-grid">
 
                 {
                     products.map(product =>
-                        <div key={products._id}>
+                        <div className='border-design' key={products._id}>
                             <h5>Name:{product.name}</h5>
                             <h5>Price:{product.price}</h5>
                             <button onClick={() => handleDelete(product._id)} className='btn btn-danger mt-5'>Delete</button>
