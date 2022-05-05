@@ -18,7 +18,6 @@ const SingleProductDetails = () => {
     const handleDelivered = (id) => {
         let newQuantity = products.quantity - 1;
         const newProduct = { ...products, quantity: newQuantity }
-        //copy all previous data if exist in product and setup new quantity 
         setProducts(newProduct);
         fetch(`http://localhost:5000/item/${id}`, {
             method: 'PUT',
@@ -35,7 +34,6 @@ const SingleProductDetails = () => {
         let newQuantity = products.quantity + restock;
         // console.log(newQuantity);
         const newProduct = { ...products, quantity: newQuantity }
-        //copy all previous data if exist in product and setup new quantity 
         setProducts(newProduct);
         fetch(`http://localhost:5000/item/${id}`, {
             method: 'PUT',
@@ -60,9 +58,20 @@ const SingleProductDetails = () => {
                     <button onClick={() => handleDelivered(products._id)} className='btn btn-info mt-3 mb-3'>delivered</button>
                 </div>
                 <div>
+                    <h4>Restock Product</h4>
+                </div>
+                <div>
                     <form onSubmit={handleRestock} >
-                        <input type="text" name="restock" id="" />
-                        <input type="submit" value="Restock" />
+                        <div>
+
+                            <input type="text" name="restock" id="" placeholder='Restock or Add Product' />
+
+                        </div>
+                        <div className='mt-2'>
+
+                            <input type="submit" value="Restock" />
+
+                        </div>
                     </form>
                 </div>
                 <button onClick={handleInventory} className='btn btn-primary mt-3'>Manage Inventory</button>
