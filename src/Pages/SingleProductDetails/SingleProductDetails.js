@@ -29,8 +29,25 @@ const SingleProductDetails = () => {
         })
     }
 
+    const handleRestock = event => {
+        event.preventDefault();
+        const restock = parseInt(event.target.restock.value);
+        let newQuantity = products.quantity + restock;
+        // console.log(newQuantity);
+        const newProduct = { ...products, quantity: newQuantity }
+        //copy all previous data if exist in product and setup new quantity 
+        setProducts(newProduct);
+        fetch(`http://localhost:5000/item/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newProduct)
+        })
+    }
+
     return (
-        <divc className='d-flex align-items-center justify-content-center'>
+        <div className='d-flex align-items-center justify-content-center'>
             <div>
                 <h2>Product Id: {products._id}</h2>
                 <img className='img-fluid' src={products.img} alt="" />
@@ -40,12 +57,18 @@ const SingleProductDetails = () => {
                 <p>Description: {products.description}</p>
                 <p>SupplierName: {products.supplierName}</p>
                 <div>
-                    <button onClick={() => handleDelivered(products._id)} className='btn btn-info mt-3'>delivered</button>
+                    <button onClick={() => handleDelivered(products._id)} className='btn btn-info mt-3 mb-3'>delivered</button>
+                </div>
+                <div>
+                    <form onSubmit={handleRestock} >
+                        <input type="text" name="restock" id="" />
+                        <input type="submit" value="Restock" />
+                    </form>
                 </div>
                 <button onClick={handleInventory} className='btn btn-primary mt-3'>Manage Inventory</button>
             </div>
 
-        </divc>
+        </div>
     );
 };
 

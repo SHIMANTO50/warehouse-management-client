@@ -43,7 +43,7 @@ const ManageInventory = () => {
                         <div className='border-design p-5' key={products._id}>
                             <h5>Name:{product.name}</h5>
                             <h5>Price:{product.price}</h5>
-                            <p>Quantity: {product.quantity}</p>
+                            <p>Quantity: {product.quantity} kg</p>
                             <p>Other Description: {product.description}</p>
                             <p>SupplierName: {product.supplierName}</p>
                             <button onClick={() => handleDelete(product._id)} className='btn btn-danger mt-5'>Delete</button>
