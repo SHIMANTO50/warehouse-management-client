@@ -15,7 +15,7 @@ const Product = ({ product }) => {
                 <div className="card-body">
                     <p>Name: {name}</p>
                     <p>Price: {price}</p>
-                    <p>Quantity: {quantity}</p>
+                    <p>Quantity: {quantity} kg</p>
                     <p>Description: {description}</p>
                     <p>SupplierName: {supplierName}</p>
                     <p>Status: {status}</p>
