@@ -32,6 +32,7 @@ const AddProduct = () => {
         <div>
             <h2>Add New Product</h2>
             <form onSubmit={handleAddProduct} className='register-form'>
+
                 <input type="text" name="name" id="" placeholder='product name' />
                 <input type="text" name="price" id="" placeholder="price" />
                 <input type="text" name="quantity" id="" placeholder='quantity of product' />
