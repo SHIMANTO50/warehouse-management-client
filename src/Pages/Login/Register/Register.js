@@ -4,6 +4,7 @@ import './Register.css';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -13,6 +14,9 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+    if (loading) {
+        return <Loading></Loading>;
+    }
     if (user) {
         navigate('/home');
     }

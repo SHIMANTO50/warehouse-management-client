@@ -7,3 +7,12 @@
 .border-design{
     border: 1px solid gray;
 }
+
+@media only screen and (max-width: 576px){
+    .product-grid{
+      
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 10px;
+        
+    }
+}

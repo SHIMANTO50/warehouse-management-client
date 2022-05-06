@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import './MyItems.css';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
@@ -29,7 +30,7 @@ const MyItems = () => {
         }
     }
     return (
-        <div>
+        <div className='myitem-height'>
             <h2 className='text-center text-primary'>My Items</h2>
             <h2 className='text-center'>Total Items Added:{myitems.length}</h2>
             <div className="container product-grid">

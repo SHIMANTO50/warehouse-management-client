@@ -8,6 +8,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -29,6 +30,9 @@ const Login = () => {
 
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
 
+    }
+    if (loading) {
+        return <Loading></Loading>;
     }
     if (user) {
         navigate(from, { replace: true });
