@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './MyItems.css';
+import { useNavigate } from 'react-router-dom';
 
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const [myitems, setMyItems] = useState([]);
+    const navigate = useNavigate();
+    const handleAddMyItems = () => {
+        navigate('/addmyitems');
+    }
     useEffect(() => {
         const email = user.email;
         const url = `https://limitless-waters-59828.herokuapp.com/myitem?email=${email}`;
@@ -33,6 +38,9 @@ const MyItems = () => {
         <div className='myitem-height'>
             <h2 className='text-center text-primary'>My Items</h2>
             <h2 className='text-center'>Total Items Added:{myitems.length}</h2>
+            <div className='text-center mb-3'>
+                <button onClick={handleAddMyItems} className='btn btn-primary mt-2'>Add Items</button>
+            </div>
             <div className="container product-grid">
 
                 {
