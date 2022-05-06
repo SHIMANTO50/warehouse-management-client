@@ -13,6 +13,7 @@ import RequireAuth from './Pages/Login/Login/RequireAuth/RequireAuth';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import AddMyItems from './Pages/AddMyItems/AddMyItems';
 import MyItems from './Pages/MyItems/MyItems';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           </RequireAuth>
 
         }></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

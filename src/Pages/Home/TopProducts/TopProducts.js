@@ -9,7 +9,7 @@ const TopProducts = () => {
         <div>
             <h1 className='text-center text-primary mt-5'>Top Products</h1>
             <div className="container mt-3">
-                <div className="row">
+                <div className="row gy-2">
                     <div className="col-md-3">
                         <div class="card shadow" style={{ width: "18rem" }}>
                             <img src={rice} class="card-img-top img-fluid h-50" alt="..." />
