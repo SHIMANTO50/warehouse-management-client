@@ -31,7 +31,7 @@ const AddProduct = () => {
     }
     return (
         <div>
-            <h2>Add New Product</h2>
+            <h2 className='text-center text-primary'>Add New Product</h2>
             <form onSubmit={handleAddProduct} className='register-form'>
 
                 <input type="text" name="name" id="" placeholder='product name' />

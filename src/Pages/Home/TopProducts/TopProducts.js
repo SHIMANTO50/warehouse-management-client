@@ -7,7 +7,7 @@ import oil from '../../../images/oil.jpg';
 const TopProducts = () => {
     return (
         <div>
-            <h2 className='text-center text-primary mt-5'>Top Products</h2>
+            <h1 className='text-center text-primary mt-5'>Top Products</h1>
             <div className="container mt-3">
                 <div className="row">
                     <div className="col-md-3">

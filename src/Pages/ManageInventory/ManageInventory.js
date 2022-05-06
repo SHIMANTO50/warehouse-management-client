@@ -32,7 +32,8 @@ const ManageInventory = () => {
 
     return (
         <div>
-            <h2>Products: {products.length}</h2>
+            <h2 className='text-center text-primary'>Manage Inventory</h2>
+            <h2 className='text-center'>Total Products: {products.length}</h2>
             <div className='text-center'>
                 <button onClick={handleAddProductNavigate} className='btn btn-primary mt-5 mb-5'>Add New Item</button>
             </div>

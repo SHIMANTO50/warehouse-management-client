@@ -34,7 +34,7 @@ const AddMyItems = () => {
     }
     return (
         <div>
-            <h2>Add My Items</h2>
+            <h2 className='text-center text-primary'>Add My Items</h2>
             <form onSubmit={handleAddMyItem} className='register-form'>
                 <input type="email" name="email" value={user.email} id="" placeholder='User Email' />
                 <input type="text" name="prname" id="" placeholder='product name' />

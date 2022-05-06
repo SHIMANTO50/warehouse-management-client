@@ -30,7 +30,8 @@ const MyItems = () => {
     }
     return (
         <div>
-            <h2>Total Items:{myitems.length}</h2>
+            <h2 className='text-center text-primary'>My Items</h2>
+            <h2 className='text-center'>Total Items Added:{myitems.length}</h2>
             <div className="container product-grid">
 
                 {
