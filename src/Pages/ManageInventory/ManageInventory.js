@@ -6,7 +6,7 @@ const ManageInventory = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://limitless-waters-59828.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
@@ -17,7 +17,7 @@ const ManageInventory = () => {
         const proceed = window.confirm('Do you want to Delete?');
         if (proceed) {
             console.log('Deleting User id', id);
-            const url = `http://localhost:5000/item/${id}`
+            const url = `https://limitless-waters-59828.herokuapp.com/item/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

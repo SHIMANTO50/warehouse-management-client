@@ -9,7 +9,7 @@ const SingleProductDetails = () => {
         navigate('/inventory');
     }
     useEffect(() => {
-        const url = `http://localhost:5000/item/${id}`;
+        const url = `https://limitless-waters-59828.herokuapp.com/item/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -19,7 +19,7 @@ const SingleProductDetails = () => {
         let newQuantity = products.quantity - 1;
         const newProduct = { ...products, quantity: newQuantity }
         setProducts(newProduct);
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://limitless-waters-59828.herokuapp.com/item/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -35,7 +35,7 @@ const SingleProductDetails = () => {
         // console.log(newQuantity);
         const newProduct = { ...products, quantity: newQuantity }
         setProducts(newProduct);
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://limitless-waters-59828.herokuapp.com/item/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

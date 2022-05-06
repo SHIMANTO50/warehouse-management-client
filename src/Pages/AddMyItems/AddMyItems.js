@@ -18,7 +18,7 @@ const AddMyItems = () => {
         const product = { email, prname, prprice, prquantity, prdescription, prsupplierName, prstatus };
 
         //send data to server
-        fetch('http://localhost:5000/myitem', {
+        fetch('https://limitless-waters-59828.herokuapp.com/myitem', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

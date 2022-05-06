@@ -6,7 +6,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/item')
+        fetch('https://limitless-waters-59828.herokuapp.com/item')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

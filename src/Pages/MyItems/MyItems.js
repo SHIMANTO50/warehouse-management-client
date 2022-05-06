@@ -8,7 +8,7 @@ const MyItems = () => {
     const [myitems, setMyItems] = useState([]);
     useEffect(() => {
         const email = user.email;
-        const url = `http://localhost:5000/myitem?email=${email}`;
+        const url = `https://limitless-waters-59828.herokuapp.com/myitem?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyItems(data))
@@ -17,7 +17,7 @@ const MyItems = () => {
         const proceed = window.confirm('Do you want to Delete?');
         if (proceed) {
             console.log('Deleting User id', id);
-            const url = `http://localhost:5000/myitem/${id}`
+            const url = `https://limitless-waters-59828.herokuapp.com/myitem/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
